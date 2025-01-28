@@ -23,7 +23,6 @@ Dataset(Augmented)/train"))
 val_datagen = ImageDataGenerator(preprocessing_function= preprocess_input)
 12.train = train_datagen.flow_from_directory(directory="/content/new plant diseases
 dataset(augmented)/New Plant Diseases
-35
 Dataset(Augmented)/train",target_size(256,256),batch_size=32)val =
 val_datagen.flow_from_directory(directory="/content/new plant diseases dataset(augmented)/New Plant
 Diseases Dataset(Augmented)/valid", target_size= (256,256), batch_size=32)
@@ -56,7 +55,6 @@ from keras.models import load_model
 model = load_model("/content/best_model.h5")
 28.acc = model.evaluate_generator(val)[1]
 print(f"The accuracy of your model is {acc*100}
-36
 %")
 29.ref=dict(zip(list(train.class_indices.values()) ,list(train.class_indices.keys())))
 30.def prediction(path):
